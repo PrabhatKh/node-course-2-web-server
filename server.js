@@ -48,6 +48,12 @@ app.get('/about', (req, res) =>{
    });
 });
 
+app.get('/portfolio',(req,res) => {
+    res.render('portfolio.hbs', {
+        pageTitle: 'Projects page'
+    });
+})
+
 app.get('/bad', (req, res) => {
     res.send({
         errorMessage: 'Sorry the page requested doesnot exist'
